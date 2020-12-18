@@ -1,0 +1,4 @@
+[submodule "innovds/odoo_marketplace"]
+	path = innovds/odoo_marketplace
+	url = git@github.com:innovds/odoo_marketplace.git
+	branch = master
