@@ -1,0 +1,46 @@
+version: "3.8"
+services:
+  erp:
+    image: odoo:14
+    container_name: odoo
+    ports:
+      - "8069:8069"
+    volumes:
+      # - ./data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+      - ~/projets/odoo/enterprise:/mnt/entreprise
+    environment:
+      - HOST=postgresql
+      - USER=odoo
+      - PASSWORD=odoo
+    # command:
+    #   odoo -d dev -u academy
+  postgresql:
+    extends:
+      file: docker-compose-postgresql.yml
+      service: postgresql
+
+
+# version: "3.3"
+# services:
+#   erp:
+#     image: alten/odoo:13.0
+#     restart: always
+#     # command: ["--", "--dev=reload"]
+#     ports:
+#       - "8069:8069"
+#     volumes:
+#       - ./data:/var/lib/odoo
+#       - ../../config:/etc/odoo
+#       - ../../addons:/mnt/extra-addons
+#     environment:
+#       - HOST=postgres_db_1
+#       - USER=openpg
+#       - PASSWORD=test123*
+#     networks:
+#       - altoo
+# networks:
+#   altoo:
+#     external:
+#       name: backend
