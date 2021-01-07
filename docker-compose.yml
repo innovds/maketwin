@@ -15,7 +15,7 @@ services:
       - USER=odoo
       - PASSWORD=odoo
     # command:
-    #   odoo -d dev -u academy
+    #   odoo -d dev -u ids_printing
   postgresql:
     extends:
       file: docker-compose-postgresql.yml
