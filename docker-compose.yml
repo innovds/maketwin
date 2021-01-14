@@ -1,25 +1,28 @@
 version: "3.8"
 services:
   erp:
-    image: odoo:14
-    container_name: odoo
+    # image: odoo:14
+    # image: pdockercr.azurecr.io/market:1.0.0
+    build: .
+    # container_name: odoo
     ports:
       - "8069:8069"
     volumes:
-      # - ./data:/var/lib/odoo
+      - ./data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
       - ~/projets/odoo/enterprise:/mnt/entreprise
     environment:
-      - HOST=postgresql
+      - HOST=host.docker.internal
       - USER=odoo
       - PASSWORD=odoo
-    # command:
-    #   odoo -d dev -u ids_printing
-  postgresql:
-    extends:
-      file: docker-compose-postgresql.yml
-      service: postgresql
+    command:
+      odoo -d maketwin -u ids_printing -u ids_website_sale_product_model_3d -u ids_product_model_3d -u ids_model_3d_widget
+      # odoo -d dev -u ids_market --proxy-mode
+  # postgresql:
+  #   extends:
+  #     file: docker-compose-postgresql.yml
+  #     service: postgresql
 
 
 # version: "3.3"

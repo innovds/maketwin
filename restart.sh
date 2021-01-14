@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker restart odoo
+docker-compose restart erp
 
-docker logs -f odoo
+docker-compose logs -f erp
