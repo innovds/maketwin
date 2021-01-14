@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker exec odoo /usr/bin/odoo scaffold $* /mnt/extra-addons
+docker-compose exec erp /usr/bin/odoo scaffold $* /mnt/extra-addons

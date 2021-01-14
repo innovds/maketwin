@@ -1,3 +1,15 @@
 [submodule "addons/ids_printing"]
 	path = addons/ids_printing
 	url = git@github.com:innovds/ids_printing.git
+[submodule "addons/ids_model_3d_widget"]
+	path = addons/ids_model_3d_widget
+	url = git@github.com:innovds/ids_model_3d_widget.git
+	branch = master
+[submodule "addons/ids_product_model_3d"]
+	path = addons/ids_product_model_3d
+	url = git@github.com:innovds/ids_product_model_3d.git
+	branch = master
+[submodule "addons/ids_website_sale_product_model_3d"]
+	path = addons/ids_website_sale_product_model_3d
+	url = git@github.com:innovds/ids_website_sale_product_model_3d.git
+	branch = master
