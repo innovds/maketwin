@@ -13,3 +13,7 @@
 	path = addons/ids_website_sale_product_model_3d
 	url = git@github.com:innovds/ids_website_sale_product_model_3d.git
 	branch = master
+[submodule "addons/odoo_marketplace"]
+	path = addons/odoo_marketplace
+	url = git@github.com:innovds/odoo_marketplace.git
+	branch = master
