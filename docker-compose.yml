@@ -17,14 +17,12 @@ services:
       - USER=odoo
       - PASSWORD=odoo
     command:
-      odoo -d maketwin -u ids_printing -u ids_website_sale_product_model_3d -u ids_product_model_3d -u ids_model_3d_widget
+      odoo -d maketwin -u ids_printing -u ids_website_sale_product_model_3d -u ids_product_model_3d -u ids_mp_product_model_3d -u ids_model_3d_widget
       # odoo -d dev -u ids_market --proxy-mode
   # postgresql:
   #   extends:
   #     file: docker-compose-postgresql.yml
   #     service: postgresql
-
-
 # version: "3.3"
 # services:
 #   erp:
